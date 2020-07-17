@@ -1,0 +1,50 @@
+
+#addbutton, #addbutton1{
+	border: 1px solid #203bf4;
+	padding: 5px;
+	margin: 10px 0;
+	background-color : #6bff2e;
+	border-radius : 3px;
+	font-weight : bold;
+	width: 120px; 
+	font-size: 12px;
+	
+}
+
+.add-button {
+	border: 1px solid #666; 
+	border-radius: 5px; 
+	padding: 4px; 
+	font-size: 12px;
+	font-weight: bold;
+	width: 120px; 
+	padding: 5px 10px; 
+	
+	margin-bottom: 15px;
+	background: #cccccc;
+}
+
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+

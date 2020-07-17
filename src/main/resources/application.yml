@@ -1,0 +1,19 @@
+management:
+ security:
+    enabled: false
+
+server:
+  port: 6060
+spring:
+  datasource:
+    password: Admin@2015
+    url: jdbc:mysql://localhost:3306/customer_catalogue
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+  couchbase:
+    env:
+      timeouts:
+        management:
+          
