@@ -34,22 +34,6 @@
 			window.location = "showLog" + id;
 		})
 	});
-
-	$('#tabs').on('click', '.tablink,#prodTabs a', function(e) {
-		e.preventDefault();
-		var url = $(this).attr("data-url");
-
-		if (typeof url !== "undefined") {
-			var pane = $(this), href = this.hash;
-
-			// ajax load from data-url
-			$(href).load(url, function(result) {
-				pane.tab('show');
-			});
-		} else {
-			$(this).tab('show');
-		}
-	});
 </script>
 <script src="https://kit.fontawesome.com/6e1478f4b2.js"
 	crossorigin="anonymous"></script>
@@ -123,13 +107,11 @@
 
 
 			<div class="card text-center">
-				<div  class="card-header">
+				<div class="card-header">
 
-					<ul 
-						class="nav nav-tabs nav nav-pills card-header-pills">
+					<ul class="nav nav-tabs nav nav-pills card-header-pills">
 
-						<li><a class="nav-link " data-toggle="tab"
-							data-url="?action=getAllUsersProfiles1" href="#menu11">Saving
+						<li><a class="nav-link " data-toggle="tab" href="#menu11">Saving
 								Accounts</a></li>
 						<li><a class="nav-link " data-toggle="tab" href="#menu22">Current
 								Accounts</a></li>
@@ -138,8 +120,7 @@
 
 				<div class="tab-content bg-white">
 
-					<div id="menu11" class="tab-pane card-body fade"
-						data-url="/getAllUsersProfiles2">
+					<div id="menu11" class="tab-pane card-body fade">
 
 						<span class="text-primary">${ addcustomerresulmsg}</span> <input
 							type="button" value="Add Customer"
@@ -223,8 +204,7 @@
 
 				<div class="tab-content bg-white">
 
-					<div id="menu33" class="tab-pane card-body fade"
-						data-url="/getAllUsersProfiles2">
+					<div id="menu33" class="tab-pane card-body fade">
 
 						<span class="text-primary">${ addcustomerresulmsg}</span> <input
 							type="button" value="Add Customer"
@@ -315,8 +295,7 @@
 
 				<div class="tab-content bg-white">
 
-					<div id="menu55" class="tab-pane card-body fade"
-						data-url="/getAllUsersProfiles2">
+					<div id="menu55" class="tab-pane card-body fade">
 
 						<span class="text-primary">${ addcustomerresulmsg}</span> <input
 							type="button" value="Add Customer"
@@ -423,8 +402,7 @@
 
 				<div class="tab-content bg-white">
 
-					<div id="#AccountApplications" class="tab-pane card-body fade"
-						data-url="/getAllUsersProfiles2">
+					<div id="#AccountApplications" class="tab-pane card-body fade">
 
 						<span class="text-primary">${ addcustomerresulmsg}</span> <input
 							type="button" value="Add Customer"
@@ -505,22 +483,6 @@
 
 
 
-
-			<hr />
-
-
-			<div id="tabs">
-				<ul class="nav nav-tabs" id="prodTabs">
-					<li class="active"><a href="#tab_basic">Basic</a></li>
-					<li><a href="#tab_images" data-url="?action=getAllUsersProfiles1">Images</a></li>
-					<li><a href="#tab_videos" data-url="?action=videos">Videos</a></li>
-				</ul>
-				<div class="tab-content">
-					<div id="tab_basic" class="tab-pane active"></div>
-					<div id="tab_images" class="tab-pane active"></div>
-					<div id="tab_videos" class="tab-pane active"></div>
-				</div>
-			</div>
 
 
 

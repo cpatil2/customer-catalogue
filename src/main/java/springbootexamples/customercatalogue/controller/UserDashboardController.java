@@ -32,7 +32,7 @@ public class UserDashboardController {
 		
 		//fetching all required data beforehand
 		
-	/*	List<UserProfile> userProfileList = userService.getAllUsersProfiles();
+		List<UserProfile> userProfileList = userService.getAllUsersProfiles();
 		logger.info("Inside getalluserprofiles : " + userProfileList.toString());
 
 		// code for Convert UserProfile to UserProfileDto
@@ -41,7 +41,7 @@ public class UserDashboardController {
 		model.addAttribute("usersProfilesList", userProfileList);
 		
 		
-		List<UserProfile> userProfileList2 = userService.getAllUsersProfiles();
+		/*List<UserProfile> userProfileList2 = userService.getAllUsersProfiles();
 		logger.info("Inside getalluserprofiles : " + userProfileList2.toString());
 
 		// code for Convert UserProfile to UserProfileDto
