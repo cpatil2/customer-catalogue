@@ -77,12 +77,10 @@
 
 				
 				<button type="submit" class="btn btn-success">LogIn</button>
-				<button type="reset" class="btn btn-warning">Reset</button>
-				<button
-					onclick="window.location.href='showUserSignupForm'; return false;"
-					class="btn btn-danger">Signup</button>
-				<!-- </div> -->
+				
 			</form>
+			
+			<a class="card-title" href="showUserSignupForm">Register new user? click here</a>
 			
 		</div>
 	</div>

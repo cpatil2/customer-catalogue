@@ -4,20 +4,25 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import org.springframework.web.servlet.view.JstlView;
 
+import springbootexamples.customercatalogue.interceptor.LoggingInterceptor;
+
 @Configuration
 @ComponentScan(basePackages="springbootexamples.customercatalogue")
-public class ApplicationConfig {
+public class ApplicationConfig extends WebMvcConfigurationSupport{
 	
 	
-	protected void addResourceHandler(ResourceHandlerRegistry resourceHandlerRegistry) {
-		resourceHandlerRegistry.addResourceHandler("css/**","images/**","js/**")
-								.addResourceLocations("/static/css/","/static/images/","/static/js");
-
+	
+	@Override
+	protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("css/**","images/**","js/**")
+		.addResourceLocations("/static/css/","/static/images/","/static/js");
 	}
 	
 	@Bean
@@ -28,13 +33,11 @@ public class ApplicationConfig {
 		internalResourceViewResolver.setViewClass(JstlView.class);
 		return internalResourceViewResolver;
 	}
+
 	
-//	@Bean
-//	public InternalResourceViewResolver internalResourceViewResolver() {
-//	    InternalResourceViewResolver bean = new InternalResourceViewResolver();
-//	    bean.setViewClass(JstlView.class);
-//	    bean.setPrefix("/WEB-INF/jsp/");
-//	    bean.setSuffix(".jsp");
-//	    return bean;
-//	}
+	@Override
+	protected void addInterceptors(InterceptorRegistry registry) {
+		// TODO Auto-generated method stub
+		registry.addInterceptor(new LoggingInterceptor()).addPathPatterns("/*");
+	}
 }
